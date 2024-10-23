@@ -3,7 +3,7 @@
 This project is a fully interactive **Kanban Board** built using **React.js**. It allows users to manage tasks by grouping them based on **Status**, **User**, or **Priority**. The board also supports adding new tasks and displays user-specific task information.
 
 You can check the live deployment of the project at:  
-**[Kanban Board on Netlify](https://xyznetlify.com)**
+🔗**https://kanban-taskflow.netlify.app/**
 
 ## Features
 
@@ -29,7 +29,7 @@ You can check the live deployment of the project at:
    You can download the project or fork the repository using the following command:
 
    ```bash
-   git clone https://github.com/your-username/kanban-board.git
+   git clone https://github.com/atharvarai/Kanban-Board-TaskFlow.git
    ```
 
    Then, navigate to the project directory:
