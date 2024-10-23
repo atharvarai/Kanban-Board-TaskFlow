@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# Kanban Board Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a fully interactive **Kanban Board** built using **React.js**. It allows users to manage tasks by grouping them based on **Status**, **User**, or **Priority**. The board also supports adding new tasks and displays user-specific task information.
 
-## Available Scripts
+You can check the live deployment of the project at:  
+**[Kanban Board on Netlify](https://xyznetlify.com)**
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Interactive Kanban Columns**: Organize tasks by **Status**, **Priority**, or **User**.
+- **Add New Tasks**: Users can add new tasks directly to any column, and each task can have custom attributes such as status, priority, and assigned user.
+- **Status Icons**: Each task displays a corresponding icon for its status when grouped by **User** or **Priority**.
+- **Responsive Design**: The design is fully responsive and adapts to various screen sizes, from desktop to mobile.
+- **Session Persistence**: The application uses `sessionStorage` to save the user's preferences and board state, ensuring that data persists even after a page reload.
+- **Dropdown Filtering**: Users can filter tasks by grouping (status, user, priority) and sorting (priority, title) using the dropdown in the header.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React.js**: The core framework for building the interactive components.
+- **Axios**: Used to fetch ticket data from the provided API.
+- **CSS Flexbox**: Used for responsive layout design, making the UI adapt to different screen sizes.
+- **SessionStorage**: Used to persist state across page reloads, such as grouping and sorting preferences.
+- **Netlify**: The application is deployed and hosted on Netlify for fast and reliable delivery.
 
-### `npm test`
+## Installation and Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clone or Fork this Repository**
 
-### `npm run build`
+   You can download the project or fork the repository using the following command:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   git clone https://github.com/your-username/kanban-board.git
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   Then, navigate to the project directory:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   cd kanban-board
+   ```
 
-### `npm run eject`
+2. **Install Dependencies**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   To install the project dependencies, use npm:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Run the Project**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   Once the dependencies are installed, you can start the development server by running:
 
-## Learn More
+   ```bash
+   npm start
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   The project will be available at `http://localhost:3000`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Functionalities
 
-### Code Splitting
+1. **Grouping by Status, User, and Priority**:  
+   - You can group tasks into columns by status (e.g., Todo, In Progress), by assigned user, or by task priority.
+   
+2. **Sorting by Priority and Title**:  
+   - The tasks within each column can be sorted by priority (highest to lowest) or alphabetically by title.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. **Adding New Cards**:  
+   - You can easily add new tasks/cards to any column based on the current grouping criteria (status, user, or priority).
 
-### Analyzing the Bundle Size
+4. **Status Icons**:  
+   - Tasks display relevant status icons when grouped by **User** or **Priority** for better visual feedback.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+5. **Responsive Layout**:  
+   - The board adjusts its layout based on the device screen size. It displays columns side by side on larger screens and stacks them on smaller screens for easy navigation.
 
-### Making a Progressive Web App
+## API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The application fetches tasks and users from an external API. The API response contains two key objects:
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Tickets**: Each ticket represents a task in the Kanban board.
+- **Users**: Information about the users, used to assign tasks to specific people.
